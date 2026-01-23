@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Maintenance Plans — JV Electrical Services</title>
+	<meta name="description" content="Electrical maintenance plans in Chennai — Monthly, Quarterly, Annual, Emergency, Preventive, Comprehensive." />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Tailwind -->
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script>tailwind.config = { darkMode: 'class' }</script>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+	<style>
+    html { scroll-behavior: smooth; }
+
+    * {
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+
+    /* Light Mode (Default) */
+    body {
+      background-color: #f9f9f9;
+      color: #1f2937;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body .navbar { 
+      background-color: #00594E; 
+      border-color: rgba(255,255,255,0.15); 
+      color: white;
+    }
+    body .navbar a { color: white; }
+    body .navbar a:hover { color: #E8F5F0; }
+    
+    body .btn-primary { 
+      background-color: #00594E; 
+      color: white; 
+      border: none;
+    }
+    body .btn-primary:hover { background-color: #003f36; }
+    
+    body .section-dark { background-color: #00594E; color: white; }
+    body .section-light { background-color: #FFF6E4; color: #1f2937; }
+    body .card-service { 
+      background-color: #FFF6E4; 
+      color: #1f2937; 
+      border: 1px solid #E8D4C0; 
+    }
+    body .text-muted { color: #6b7280; }
+    body .footer { background-color: #003f36; color: #e5e7eb; }
+    body h1, body h2, body h3 { color: #1f2937; }
+
+    /* Dark Mode */
+    body.dark-mode {
+      background-color: #0f1419;
+      color: #e5e7eb;
+    }
+
+    body.dark-mode .navbar { 
+      background-color: #0a2a26; 
+      border-color: rgba(255,255,255,0.1); 
+      color: #e5e7eb;
+    }
+    body.dark-mode .navbar a { color: #e5e7eb; }
+    body.dark-mode .navbar a:hover { color: #00d9b5; }
+    
+    body.dark-mode .btn-primary { 
+      background-color: #00d9b5; 
+      color: #0f1419; 
+    }
+    body.dark-mode .btn-primary:hover { background-color: #00a881; }
+    
+    body.dark-mode .section-dark { background-color: #0a2a26; color: #e5e7eb; }
+    body.dark-mode .section-light { background-color: #1a1f26; color: #e5e7eb; border: 1px solid #2a3a36; }
+    body.dark-mode .card-service { 
+      background-color: #1a1f26; 
+      color: #e5e7eb; 
+      border: 1px solid #2a3a36; 
+    }
+    body.dark-mode .text-muted { color: #9ca3af; }
+    body.dark-mode .footer { background-color: #050f0d; color: #9ca3af; }
+    body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 { color: #ffffff; }
+
+    body.dark-mode input, body.dark-mode select, body.dark-mode textarea {
+      background-color: #374151;
+      color: white;
+      border-color: #6b7280;
+    }
+
+    body #bulb-icon {
+      filter: drop-shadow(0 0 6px rgba(255,200,0,0.4));
+      font-size: 1.25rem;
+      line-height: 1;
+    }
+
+    body.dark-mode #bulb-icon {
+      filter: drop-shadow(0 0 8px rgba(0,217,181,0.5));
+    }
+
+    /* Bulb icon styles */
+    .bulb-icon svg {
+      width: 1.25rem;
+      height: 1.25rem;
+      display: block;
+      transition: filter 0.25s ease, fill 0.25s ease, transform 0.25s ease;
+      fill: #cbd5e1; /* default unlit color */
+    }
+
+    /* Lit state (when light theme is active) */
+    .bulb-icon.lit svg {
+      fill: #FFD24D;
+      filter: drop-shadow(0 0 10px rgba(255,200,80,0.9)) drop-shadow(0 0 18px rgba(255,180,50,0.6));
+      transform: scale(1.05);
+    }
+
+    /* Unlit state (dark theme) */
+    .bulb-icon.unlit svg {
+      fill: #94a3b8;
+      filter: none;
+      transform: scale(1);
+    }
+
+    /* Enhanced accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        transition: none !important;
+      }
+    }
+
+    /* Better button contrast */
+    .btn-primary, .btn-primary:visited {
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    body .btn-white {
+      background-color: white;
+      color: #00594E;
+      border: 2px solid white;
+    }
+    
+    body .btn-white:hover {
+      background-color: #f3f4f6;
+      color: #00594E;
+    }
+
+    body.dark-mode .btn-white {
+      background-color: white;
+      color: #0a2a26;
+    }
+    
+    body.dark-mode .btn-white:hover {
+      background-color: #f0f0f0;
+    }
+
+    /* Section spacing */
+    section {
+      scroll-margin-top: 6rem;
+    }
+
+    /* Enhanced responsiveness for small screens */
+    @media (max-width: 480px) {
+      .section-dark, .section-light {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+      }
+      .text-4xl {
+        font-size: 1.875rem !important;
+      }
+      .text-3xl {
+        font-size: 1.5rem !important;
+      }
+      .text-2xl {
+        font-size: 1.25rem !important;
+      }
+      .text-lg {
+        font-size: 1rem !important;
+      }
+      .text-base {
+        font-size: 0.875rem !important;
+      }
+      .btn-primary, .btn-white {
+        padding: 0.5rem 1rem !important;
+        font-size: 0.875rem !important;
+      }
+      .card-service {
+        padding: 1rem !important;
+      }
+      .max-w-6xl {
+        max-width: 100% !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
+      .max-w-7xl {
+        max-width: 100% !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
+      .grid {
+        grid-template-columns: 1fr !important;
+      }
+      
+      .w-full {
+        width: 100% !important;
+      }
+      .order-first {
+        order: 0 !important;
+      }
+      .mb-6 {
+        margin-bottom: 1.5rem !important;
+      }
+      .gap-8 {
+        gap: 1rem !important;
+      }
+      .gap-6 {
+        gap: 1rem !important;
+      }
+      .gap-4 {
+        gap: 0.5rem !important;
+      }
+      .navbar {
+        height: 4rem !important;
+      }
+      .navbar .text-base {
+        font-size: 0.875rem !important;
+      }
+      .navbar .text-lg {
+        font-size: 1rem !important;
+      }
+    }
+
+	</style>
+<header class="navbar fixed top-0 inset-x-0 z-50 border-b shadow-md">
+
+<div class="max-w-6xl mx-auto px-4 h-16 md:h-24 flex items-center justify-between">
+
+		<!-- Logo -->
+		<div class="flex items-center gap-3">
+			<div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center text-xs font-bold text-white">
+				JV
+			</div>
+			<span class="text-lg md:text-xl font-bold tracking-wide hidden sm:inline">
+				JV Electrical Services
+			</span>
+			<span class="text-lg md:text-xl font-bold tracking-wide sm:hidden">
+				JV
+			</span>
+		</div>
+
+		<!-- Nav -->
+		<nav class="hidden md:flex space-x-8 text-sm font-medium">
+			<a href="../copy.html" class="hover:text-opacity-80 transition">Home</a>
+			<a href="../copy.html#about" class="hover:text-opacity-80 transition">About</a>
+			<a href="../copy.html#services" class="hover:text-opacity-80 transition">Services</a>
+			<a href="../copy.html#contact" class="hover:text-opacity-80 transition">Contact</a>
+		</nav>
+
+		<!-- Right controls -->
+		<div class="flex items-center gap-4">
+			<!-- Theme Toggle -->
+			<button id="bulb-toggle" class="flex items-center justify-center w-10 h-10 rounded-full
+			             bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600
+			             transition"
+			            aria-label="Toggle theme"
+			            title="Toggle theme"
+			            aria-pressed="false">
+				<span id="bulb-icon" class="bulb-icon" role="img" aria-hidden="true">
+					<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+						<path d="M9 18h6v1a1 1 0 0 1-1 1H10a1 1 0 0 1-1-1v-1zm3-16a6 6 0 0 0-6 6c0 2.21 1.2 3.86 2.11 4.77.63.63.89 1.38.89 2.23V17h6v-1c0-.85.26-1.6.89-2.23C17.8 11.86 19 10.21 19 8a6 6 0 0 0-7-6z"/>
+					</svg>
+				</span>
+			</button>
+
+			<!-- Call CTA -->
+			<a href="tel:8939726916" class="hidden sm:inline-block">
+				<span class="btn-primary px-4 py-2 rounded-full font-semibold shadow-lg hover:scale-105 transition text-sm">
+					📞 Call
+				</span>
+			</a>
+		</div>
+
+	</div>
+</header>
+
+<!-- HERO -->
+<section class="section-dark">
+  <div class="max-w-6xl mx-auto px-4 py-12 md:py-20">
+    <h1 class="text-4xl md:text-5xl font-bold text-white">
+      Maintenance Plans
+    </h1>
+    <p class="text-white mt-4 md:mt-6 max-w-2xl">
+      Keep your electrical systems safe and efficient with our comprehensive maintenance plans. Monthly, Quarterly, Annual, Emergency, Preventive, and Comprehensive options.
+    </p>
+  </div>
+</section>
+
+
+<!-- CONTENT: services list + request + faq + testimonials -->
+<main class="max-w-7xl mx-auto px-6 py-12 pb-28">
+	<div class="grid md:grid-cols-3 gap-8 mb-8">
+		<div class="bg-white card-service p-8 rounded-2xl shadow hover:shadow-2xl hover:-translate-y-2 transition transform">
+			<div class="text-5xl mb-4">📅</div>
+			<h3 class="text-2xl font-semibold mb-3">Monthly Maintenance</h3>
+			<p class="text-base text-muted">Regular check-ups for wiring, switches and outlets.</p>
+			<ul class="mt-4 text-sm text-muted space-y-2 pl-4 list-disc">
+				<li>Wiring inspection</li>
+				<li>Switch & outlet checks</li>
+				<li>Basic safety tests</li>
+			</ul>
+		</div>
+		<div class="bg-white card-service p-8 rounded-2xl shadow hover:shadow-2xl hover:-translate-y-2 transition transform">
+			<div class="text-5xl mb-4">🗓️</div>
+			<h3 class="text-2xl font-semibold mb-3">Quarterly Maintenance</h3>
+			<p class="text-base text-muted">Comprehensive quarterly inspections and repairs.</p>
+			<ul class="mt-4 text-sm text-muted space-y-2 pl-4 list-disc">
+				<li>Full system inspection</li>
+				<li>Load testing</li>
+				<li>Minor repairs included</li>
+			</ul>
+		</div>
+		<div class="bg-white card-service p-8 rounded-2xl shadow hover:shadow-2xl hover:-translate-y-2 transition transform">
+			<div class="text-5xl mb-4">📆</div>
+			<h3 class="text-2xl font-semibold mb-3">Annual Maintenance</h3>
+			<p class="text-base text-muted">Yearly deep-clean and maintenance contracts.</p>
+			<ul class="mt-4 text-sm text-muted space-y-2 pl-4 list-disc">
+				<li>Deep cleaning</li>
+				<li>Component replacement</li>
+				<li>Performance optimization</li>
+			</ul>
+		</div>
+		<div class="bg-white card-service p-8 rounded-2xl shadow hover:shadow-2xl hover:-translate-y-2 transition transform">
+			<div class="text-5xl mb-4">🚨</div>
+			<h3 class="text-2xl font-semibold mb-3">Emergency Maintenance</h3>
+			<p class="text-base text-muted">24/7 emergency repairs and troubleshooting.</p>
+			<ul class="mt-4 text-sm text-muted space-y-2 pl-4 list-disc">
+				<li>Immediate response</li>
+				<li>Emergency repairs</li>
+				<li>Troubleshooting services</li>
+			</ul>
+		</div>
+		<div class="bg-white card-service p-8 rounded-2xl shadow hover:shadow-2xl hover:-translate-y-2 transition transform">
+			<div class="text-5xl mb-4">🔧</div>
+			<h3 class="text-2xl font-semibold mb-3">Preventive Maintenance</h3>
+			<p class="text-base text-muted">Proactive checks to prevent breakdowns.</p>
+			<ul class="mt-4 text-sm text-muted space-y-2 pl-4 list-disc">
+				<li>Risk assessment</li>
+				<li>Preventive fixes</li>
+				<li>System upgrades</li>
+			</ul>
+		</div>
+		<div class="bg-white card-service p-8 rounded-2xl shadow hover:shadow-2xl hover:-translate-y-2 transition transform">
+			<div class="text-5xl mb-4">🛠️</div>
+			<h3 class="text-2xl font-semibold mb-3">Comprehensive Maintenance</h3>
+			<p class="text-base text-muted">Full coverage for homes and businesses.</p>
+			<ul class="mt-4 text-sm text-muted space-y-2 pl-4 list-disc">
+				<li>All-inclusive plans</li>
+				<li>Priority support</li>
+				<li>Discounted rates</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- FAQ + Testimonials -->
+	<section class="max-w-4xl mx-auto">
+		<div class="bg-white card-service p-6 rounded-2xl shadow mb-6">
+			<h3 class="text-2xl font-semibold mb-4">FAQs</h3>
+			<div class="space-y-3 text-sm text-muted">
+				<div class="border rounded overflow-hidden">
+					<button class="faq-q w-full text-left px-4 py-3 flex justify-between items-center">How soon will someone arrive? <span class="chev">▾</span></button>
+					<div class="faq-a px-4 py-3 hidden">2-6 hours for emergencies in Chennai.</div>
+				</div>
+				<div class="border rounded overflow-hidden">
+					<button class="faq-q w-full text-left px-4 py-3 flex justify-between items-center">Do you offer warranty? <span class="chev">▾</span></button>
+					<div class="faq-a px-4 py-3 hidden">Yes, 30-90 days depending on repair.</div>
+				</div>
+				<div class="border rounded overflow-hidden">
+					<button class="faq-q w-full text-left px-4 py-3 flex justify-between items-center">What are your service hours? <span class="chev">▾</span></button>
+					<div class="faq-a px-4 py-3 hidden">24/7 for emergencies, 9 AM - 9 PM regular.</div>
+				</div>
+				<div class="border rounded overflow-hidden">
+					<button class="faq-q w-full text-left px-4 py-3 flex justify-between items-center">Do you provide on-site repairs? <span class="chev">▾</span></button>
+					<div class="faq-a px-4 py-3 hidden">Yes, within Chennai city limits.</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="bg-white card-service p-6 rounded-2xl shadow">
+			<h3 class="text-2xl font-semibold mb-4">Testimonials</h3>
+			<div class="space-y-3 text-sm text-muted">
+				<div class="p-3 border rounded">"Fixed my fridge quickly!" — Priya</div>
+				<div class="p-3 border rounded">"Great service for my oven." — Ramesh</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer py-8 text-center text-sm">
+  <div class="max-w-6xl mx-auto px-4">
+    <p class="mb-3">© 2025 JV Electrical Services. All rights reserved.</p>
+    <p class="text-xs opacity-75">
+      Available 24/7 | Emergency Support | Professional Electricians | Chennai
+    </p>
+  </div>
+</footer>
+
+<script src="../main.js"></script>
+<script>
+// Form -> open WhatsApp with details
+const reqForm = document.getElementById('req-form');
+const reqWa = document.getElementById('req-wa');
+
+if (reqForm && reqWa) {
+  reqForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const fm = new FormData(reqForm);
+    const text = `🚀 Hi JV Electrical Services! I'm ${fm.get('name')} and I need your expert help with ${fm.get('service')}. My number is ${fm.get('phone')}. ${fm.get('message') ? `Extra details: ${fm.get('message')}` : 'Looking forward to your quick service! ⚡'}`;
+    window.open(`https://wa.me/918939726916?text=${encodeURIComponent(text)}`,'_blank');
+  });
+
+  reqWa.addEventListener('click', () =>
+    reqForm.dispatchEvent(new Event('submit'))
+  );
+}
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(btn => btn.addEventListener('click', ()=>{
+	const a = btn.nextElementSibling; a.classList.toggle('hidden'); btn.querySelector('.chev').textContent = a.classList.contains('hidden') ? '▾' : '▴';
+}));
+</script>
+</body>
+</html>
