@@ -2,11 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>Home Appliances – JV Home Services</title>
-	<meta name="description" content="Professional home appliance repair in Chennai — AC, TV, Washing Machine, Fans, Lights and more." />
+	<title>Plumbing Services — JV Home Services</title>
+	<meta name="description" content="Professional kitchen appliance repair in Chennai — Fridge, Chimney, RO, Mixie, Oven, Microwave, Dishwasher." />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#00594E">
-  <link rel="canonical" href="https://yourdomain.com/electrician-plumber-chennai.html">
 
 	<!-- Tailwind -->
 	<script src="https://cdn.tailwindcss.com"></script>
@@ -167,56 +165,82 @@
       scroll-margin-top: 6rem;
     }
 
-    /* Animations */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    /* Enhanced responsiveness for small screens */
+    @media (max-width: 480px) {
+
+      .text-4xl {
+        font-size: 1.875rem !important;
+      }
+      .text-3xl {
+        font-size: 1.5rem !important;
+      }
+      .text-2xl {
+        font-size: 1.25rem !important;
+      }
+      .text-lg {
+        font-size: 1rem !important;
+      }
+      .text-base {
+        font-size: 0.875rem !important;
+      }
+      .btn-primary, .btn-white {
+        padding: 0.5rem 1rem !important;
+        font-size: 0.875rem !important;
+      }
+      .card-service {
+        padding: 1rem !important;
+      }
+      .max-w-6xl {
+        max-width: 100% !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
+      .max-w-7xl {
+        max-width: 100% !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
+      .grid {
+        grid-template-columns: 1fr !important;
+      }
+      .w-full {
+        width: 100% !important;
+      }
+      .order-first {
+        order: 0 !important;
+      }
+      .mb-6 {
+        margin-bottom: 1.5rem !important;
+      }
+      .gap-8 {
+        gap: 1rem !important;
+      }
+      .gap-6 {
+        gap: 1rem !important;
+      }
+      .gap-4 {
+        gap: 0.5rem !important;
+      }
+      .navbar {
+        height: 4rem !important;
+      }
+      .navbar .text-base {
+        font-size: 0.875rem !important;
+      }
+      .navbar .text-lg {
+        font-size: 1rem !important;
+      }
     }
-
-    @keyframes fadeOut {
-      from { opacity: 1; transform: translateY(0); }
-      to { opacity: 0; transform: translateY(-20px); }
-    }
-
-    @keyframes slideInLeft {
-      from { opacity: 0; transform: translateX(-50px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-
-    @keyframes slideInRight {
-      from { opacity: 0; transform: translateX(50px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-
-    @keyframes bounceIn {
-      0% { opacity: 0; transform: scale(0.3); }
-      50% { opacity: 1; transform: scale(1.05); }
-      70% { transform: scale(0.9); }
-      100% { opacity: 1; transform: scale(1); }
-    }
-
-    .animate-fade-in { animation: fadeIn 1s ease-out; }
-    .animate-fade-out { animation: fadeOut 1s ease-out; }
-    .animate-slide-left { animation: slideInLeft 1s ease-out; }
-    .animate-slide-right { animation: slideInRight 1s ease-out; }
-    .animate-bounce { animation: bounceIn 1.2s ease-out; }
-
-    /* Stagger animations */
-    .animate-delay-1 { animation-delay: 0.2s; }
-    .animate-delay-2 { animation-delay: 0.4s; }
-    .animate-delay-3 { animation-delay: 0.6s; }
-    .animate-delay-4 { animation-delay: 0.8s; }
-    .animate-delay-5 { animation-delay: 1s; }
 
 	</style>
 </head>
 <body class="pt-16 md:pt-24">
 
+
 <!-- NAVBAR (same as main site) -->
 <header class="navbar fixed top-0 inset-x-0 z-50 border-b shadow-md">
 
 	<div class="max-w-6xl mx-auto px-4 h-16 md:h-24 flex items-center justify-between">
-
 
 		<!-- Logo -->
 		<div class="flex items-center gap-3">
@@ -227,11 +251,12 @@
 
 		<!-- Nav -->
 		<nav class="hidden md:flex space-x-8 text-sm font-medium">
-			<a href="../copy.html" class="hover:text-opacity-80 transition">Home</a>
-			<a href="../copy.html#about" class="hover:text-opacity-80 transition">About</a>
-			<a href="../copy.html#services" class="hover:text-opacity-80 transition">Services</a>
-			<a href="../copy.html#contact" class="hover:text-opacity-80 transition">Contact</a>
-		</nav>
+            <a href="../index.html" class="hover:text-opacity-80 transition">Home</a>
+            <a href="../index.html#about" class="hover:text-opacity-80 transition">About</a>
+            <a href="../index.html#services" class="hover:text-opacity-80 transition">Services</a>
+            <a href="../index.html#contact" class="hover:text-opacity-80 transition">Contact</a>
+        </nav>
+        
 
 		<!-- Right controls -->
 		<div class="flex items-center gap-4">
@@ -250,14 +275,14 @@
 
 	</div>
 </header>
-
 <!-- HERO -->
 <section class="section-dark">
   <div class="max-w-6xl mx-auto px-4 py-12 md:py-20">
     <h1 class="text-4xl md:text-5xl font-bold text-white">
-      Home Appliances Repair    </h1>
+      Plumbing Services
+    </h1>
     <p class="text-white mt-4 md:mt-6 max-w-2xl">
-      Professional repair services for AC, TV, Washing Machine, Fans, Lights and more.
+        Professional plumbers for leak repairs, pipe fittings, bathroom plumbing, drain cleaning and emergency services. Fast, reliable and affordable.
     </p>
   </div>
 </section>
@@ -267,183 +292,115 @@
 <main class="max-w-7xl mx-auto px-6 py-12 pb-28">
 	<div class="grid md:grid-cols-3 gap-8 mb-8">
 		<div class="bg-white card-service p-8 rounded-2xl shadow hover:shadow-2xl hover:-translate-y-2 transition transform">
-			<div class="text-5xl mb-4">🏠</div>
-			<h3 class="text-2xl font-semibold mb-3">AC Repair</h3>
-			<p class="text-base text-muted">Gas refill, compressor, blower, PCB and more.</p>
+			<div class="text-5xl mb-4">🚰</div>
+			<h3 class="text-2xl font-semibold mb-3">Leak Repair</h3>
+			<p class="text-base text-muted">Interior water Leakage,Exterior water Leakage</p>
 			<ul class="mt-4 text-sm text-muted space-y-2 pl-4 list-disc">
-				<li>Gas top-up & leak checks</li>
-				<li>Compressor & PCB repairs</li>
-				<li>Blower motor servicing</li>
-				<li>Drainage & mounting fixes</li>
+                <li>Pipe leak fixing</li>
+				<li>Tap leak repair</li>
+				<li>Wall seepage solutions</li>
 			</ul>
 		</div>
 		<div class="bg-white card-service p-8 rounded-2xl shadow hover:shadow-2xl hover:-translate-y-2 transition transform">
-			<div class="text-5xl mb-4">📺</div>
-			<h3 class="text-2xl font-semibold mb-3">TV Repair</h3>
-			<p class="text-base text-muted">Mounting, display, power and sound issues.</p>
+			<div class="text-5xl mb-4">🛁</div>
+			<h3 class="text-2xl font-semibold mb-3">Bathroom Plumbing</h3>
+			<p class="text-base text-muted">Filters, wash basin, Flush.</p>
 			<ul class="mt-4 text-sm text-muted space-y-2 pl-4 list-disc">
-				<li>Backlight & display repairs</li>
-				<li>Power supply diagnostics</li>
-				<li>Smart TV updates</li>
+                <li>Shower installation</li>
+				<li>Toilet repair & fitting</li>
+				<li>Faucet replacement</li>
+
 			</ul>
 		</div>
 		<div class="bg-white card-service p-8 rounded-2xl shadow hover:shadow-2xl hover:-translate-y-2 transition transform">
-			<div class="text-5xl mb-4">🔧</div>
-			<h3 class="text-2xl font-semibold mb-3">Washing Machine</h3>
-			<p class="text-base text-muted">Motor, drum, pump and controls.</p>
+			<div class="text-5xl mb-4">🧰</div>
+			<h3 class="text-2xl font-semibold mb-3">Pipe Fitting</h3>
+			<p class="text-base text-muted">Interior & Exterior pipe fitting</p>
 			<ul class="mt-4 text-sm text-muted space-y-2 pl-4 list-disc">
-				<li>Motor & pump repairs</li>
-				<li>Door lock & drum issues</li>
-				<li>Control board fixes</li>
+				<li>New pipe installation</li>
+				<li>CPVC / PVC fitting</li>
+				<li>Water line setup</li>
 			</ul>
 		</div>
 		<div class="bg-white card-service p-8 rounded-2xl shadow hover:shadow-2xl hover:-translate-y-2 transition transform">
 			<div class="text-5xl mb-4">🌀</div>
-			<h3 class="text-2xl font-semibold mb-3">Fan Repair</h3>
-			<p class="text-base text-muted">Ceiling, table, exhaust fans and regulators.</p>
+			<h3 class="text-2xl font-semibold mb-3">Drain Cleaning</h3>
+			<p class="text-base text-muted">Blockage & clog Removal</p>
 			<ul class="mt-4 text-sm text-muted space-y-2 pl-4 list-disc">
-				<li>Motor & blade repairs</li>
-				<li>Speed regulator fixes</li>
-				<li>Installation & balancing</li>
+				<li>Blocked sink clearing</li>
+				<li>Toilet clog removal</li>
+				<li>Drain jet cleaning</li>
 			</ul>
 		</div>
 		<div class="bg-white card-service p-8 rounded-2xl shadow hover:shadow-2xl hover:-translate-y-2 transition transform">
-			<div class="text-5xl mb-4">💡</div>
-			<h3 class="text-2xl font-semibold mb-3">Light Repair</h3>
-			<p class="text-base text-muted">LED, fluorescent, switches and wiring.</p>
+			<div class="text-5xl mb-4">🏠</div>
+			<h3 class="text-2xl font-semibold mb-3">Water Tank Services</h3>
+			<p class="text-base text-muted">Tanks & Motors</p>
 			<ul class="mt-4 text-sm text-muted space-y-2 pl-4 list-disc">
-				<li>Switch & socket repairs</li>
-				<li>LED bulb replacements</li>
-				<li>Wiring & fixture fixes</li>
+				<li>Tank installation</li>
+				<li>Motor repair</li>
+				<li>Overflow fixing</li>
 			</ul>
 		</div>
 		<div class="bg-white card-service p-8 rounded-2xl shadow hover:shadow-2xl hover:-translate-y-2 transition transform">
-			<div class="text-5xl mb-4">❄️</div>
-			<h3 class="text-2xl font-semibold mb-3">Refrigerator Repair</h3>
-			<p class="text-base text-muted">Compressor, cooling, defrost and controls.</p>
+			<div class="text-5xl mb-4">⚡</div>
+			<h3 class="text-2xl font-semibold mb-3">Emergency Plumbing</h3>
+			<p class="text-base text-muted">Repair & Assistance</p>
 			<ul class="mt-4 text-sm text-muted space-y-2 pl-4 list-disc">
-				<li>Compressor & cooling repairs</li>
-				<li>Defrost system fixes</li>
-				<li>Temperature control issues</li>
+				<li>24/7 urgent repair</li>
+				<li>Burst pipe repair</li>
+				<li>Immediate assistance</li>
 			</ul>
 		</div>
 	</div>
 
-<!-- FAQ + Testimonials (Home Appliances Version) -->
-<section class="max-w-4xl mx-auto">
-
-	<!-- FAQs -->
-	<div class="bg-white card-service p-6 rounded-2xl shadow mb-6">
-		<h3 class="text-2xl font-semibold mb-4">FAQs – Home Appliance Repair</h3>
-
-		<div class="space-y-3 text-sm text-muted">
-
-			<div class="border rounded overflow-hidden">
-				<button class="faq-q w-full text-left px-4 py-3 flex justify-between items-center">
-					Which home appliances do you repair?
-					<span class="chev">▾</span>
-				</button>
-				<div class="faq-a px-4 py-3 hidden">
-					We repair ACs, washing machines, refrigerators, TVs, microwaves and other major household appliances.
+		<!-- FAQ + Testimonials -->
+		<section>
+			<div class="bg-white card-service p-6 rounded-2xl shadow mb-6">
+				<h3 class="text-2xl font-semibold mb-4">FAQs</h3>
+				<div class="space-y-3 text-sm text-muted">
+				<div class="border rounded overflow-hidden">
+					<button class="faq-q w-full text-left px-4 py-3 flex justify-between items-center">How soon will someone arrive? <span class="chev">▾</span></button>
+					<div class="faq-a px-4 py-3 hidden">2-6 hours for emergencies in Chennai.</div>
+				</div>
+				<div class="border rounded overflow-hidden">
+					<button class="faq-q w-full text-left px-4 py-3 flex justify-between items-center">Do you handle emergency leaks?    <span class="chev">▾</span></button>
+					<div class="faq-a px-4 py-3 hidden">Yes, 24/7 emergency plumbing available.</div>
+				</div>
+				<div class="border rounded overflow-hidden">
+					<button class="faq-q w-full text-left px-4 py-3 flex justify-between items-center">Do you provide warranty? <span class="chev">▾</span></button>
+					<div class="faq-a px-4 py-3 hidden">Yes, service warranty available.</div>
+				</div>
+				<div class="border rounded overflow-hidden">
+					<button class="faq-q w-full text-left px-4 py-3 flex justify-between items-center">Do you provide on-site repairs? <span class="chev">▾</span></button>
+					<div class="faq-a px-4 py-3 hidden">Yes, within Chennai city limits.</div>
+				</div>
 				</div>
 			</div>
 
-			<div class="border rounded overflow-hidden">
-				<button class="faq-q w-full text-left px-4 py-3 flex justify-between items-center">
-					How quickly can a technician arrive?
-					<span class="chev">▾</span>
-				</button>
-				<div class="faq-a px-4 py-3 hidden">
-					For Chennai city limits, we usually arrive within 2–4 hours depending on availability and urgency.
+			<div class="bg-white card-service p-6 rounded-2xl shadow">
+				<h3 class="text-2xl font-semibold mb-4">Testimonials</h3>
+				<div class="space-y-3 text-sm text-muted">
+                    <div class="p-3 border rounded">"Quickly fixed my pipe leak!" — Suresh</div>
+                    <div class="p-3 border rounded">"Very professional plumber service." — Kavitha</div>
 				</div>
 			</div>
-
-			<div class="border rounded overflow-hidden">
-				<button class="faq-q w-full text-left px-4 py-3 flex justify-between items-center">
-					Do you provide doorstep service?
-					<span class="chev">▾</span>
-				</button>
-				<div class="faq-a px-4 py-3 hidden">
-					Yes, all repairs are performed at your home for maximum convenience.
-				</div>
-			</div>
-
-			<div class="border rounded overflow-hidden">
-				<button class="faq-q w-full text-left px-4 py-3 flex justify-between items-center">
-					Is there a warranty on repairs?
-					<span class="chev">▾</span>
-				</button>
-				<div class="faq-a px-4 py-3 hidden">
-					Yes, we provide 30–90 days service warranty depending on the type of repair and spare parts used.
-				</div>
-			</div>
-
-			<div class="border rounded overflow-hidden">
-				<button class="faq-q w-full text-left px-4 py-3 flex justify-between items-center">
-					Do you repair all major brands?
-					<span class="chev">▾</span>
-				</button>
-				<div class="faq-a px-4 py-3 hidden">
-					Yes, we service most leading appliance brands with genuine or high-quality spare parts.
-				</div>
-			</div>
-
-		</div>
+		</section>
 	</div>
-
-	<!-- Testimonials -->
-	<div class="bg-white card-service p-6 rounded-2xl shadow">
-		<h3 class="text-2xl font-semibold mb-4">Customer Reviews</h3>
-
-		<div class="space-y-3 text-sm text-muted">
-
-			<div class="p-3 border rounded">
-				"Fixed my AC the same day. Very professional and clean work." — Priya
-			</div>
-
-			<div class="p-3 border rounded">
-				"My washing machine issue was resolved quickly at a reasonable price." — Ramesh
-			</div>
-
-			<div class="p-3 border rounded">
-				"Excellent service for my refrigerator repair. Highly recommended!" — Arun
-			</div>
-
-		</div>
-	</div>
-
-</section>
-
+</main>
 
 <!-- ================= FOOTER ================= -->
 <footer class="footer py-8 text-center text-sm">
   <div class="max-w-6xl mx-auto px-4">
     <p class="mb-3">© 2025 JV Home Services. All rights reserved.</p>
     <p class="text-xs opacity-75">
-      Available 24/7 | Emergency Support | Professional Electricians | Chennai
+      Available 24/7 | Emergency Support | Professional Electrician & Plumber | Chennai
     </p>
   </div>
 </footer>
 
 <script src="../main.js"></script>
 <script>
-// Form -> open WhatsApp with details
-const reqForm = document.getElementById('req-form');
-const reqWa = document.getElementById('req-wa');
-
-if (reqForm && reqWa) {
-  reqForm.addEventListener('submit', e => {
-    e.preventDefault();
-    const fm = new FormData(reqForm);
-    const text = `🚀 Hi JV Home Services! I'm ${fm.get('name')} and I need your expert help with ${fm.get('service')}. My number is ${fm.get('phone')}. ${fm.get('message') ? `Extra details: ${fm.get('message')}` : 'Looking forward to your quick service! ⚡'}`;
-    window.open(`https://wa.me/918939726916?text=${encodeURIComponent(text)}`,'_blank');
-  });
-
-  reqWa.addEventListener('click', () =>
-    reqForm.dispatchEvent(new Event('submit'))
-  );
-}
-
 // FAQ accordion
 document.querySelectorAll('.faq-q').forEach(btn => btn.addEventListener('click', ()=>{
 	const a = btn.nextElementSibling; a.classList.toggle('hidden'); btn.querySelector('.chev').textContent = a.classList.contains('hidden') ? '▾' : '▴';
@@ -451,4 +408,3 @@ document.querySelectorAll('.faq-q').forEach(btn => btn.addEventListener('click',
 </script>
 </body>
 </html>
-
